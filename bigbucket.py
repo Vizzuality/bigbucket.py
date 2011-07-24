@@ -37,10 +37,13 @@ class Upload:
     def upload(self,filename, s3file):
         #upload file here
         filename = os.path.join(os.getcwd(),filename)
-        self.k.key = s3file
-        self.k.set_contents_from_filename(filename)
-        self.b.set_acl('public-read',s3file)
-        self.msg = 'uploaded %s as %s' % (filename,s3file)
+        if not self.test:
+            self.k.key = s3file
+            self.k.set_contents_from_filename(filename)
+            self.b.set_acl('public-read',s3file)
+            self.msg = 'uploaded %s as %s' % (filename,s3file)
+        else:
+            self.msg = 'mock uploaded %s as %s' % (filename,s3file)
         
     def loop(self):
         while True:
