@@ -28,3 +28,8 @@ optional:
 * threads - default = 32
 * test    - if True the files will not be pushed to S3
 * prefix  - for storing a directory as a subdirectory in an existing bucket
+
+
+Authors:
+---------------
+The main developer of the tool is Andrew W Hill (@andrewxhill)
