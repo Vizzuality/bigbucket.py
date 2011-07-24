@@ -20,9 +20,11 @@ How to use it
 
 where:
 
-dirname - the directory with files you wish to upload
-bucket  - the name of you S3 bucket
-optional - 
-    threads - default = 32
-    test    - if True the files will not be pushed to S3
-    prefix  - for storing a directory as a subdirectory in an existing bucket
+* dirname - the directory with files you wish to upload
+* bucket  - the name of you S3 bucket
+
+optional:
+
+* threads - default = 32
+* test    - if True the files will not be pushed to S3
+* prefix  - for storing a directory as a subdirectory in an existing bucket
